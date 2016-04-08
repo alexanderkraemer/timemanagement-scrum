@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5eea801d-f9b5-44d5-9762-36cf4cdc6f91" name="Default" comment="" />
+    <list default="true" id="5eea801d-f9b5-44d5-9762-36cf4cdc6f91" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/TimeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TimeController.php" />
+    </list>
     <ignored path="zeiterfassung.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -35,95 +37,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="list.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/task/list.blade.php">
+      <file leaf-file-name="TimeController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TimeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
-              <caret line="64" column="94" selection-start-line="64" selection-start-column="94" selection-end-line="64" selection-end-column="94" />
-              <folding>
-                <element signature="e#595#612#0#HTML" expanded="true" />
-                <marker date="1460126264000" expanded="true" signature="3550:3597" placeholder="..." />
-                <marker date="1460126264000" expanded="true" signature="3655:3680" placeholder="..." />
-                <marker date="1460126264000" expanded="true" signature="3738:3776" placeholder="..." />
-                <marker date="1460126264000" expanded="true" signature="3838:3864" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/task/edit.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="57" selection-end-column="40" />
-              <folding>
-                <marker date="1460125803000" expanded="true" signature="2874:2973" placeholder="..." />
-                <marker date="1460125803000" expanded="true" signature="3474:3592" placeholder="{...}" />
-                <marker date="1460125803000" expanded="true" signature="4727:5241" placeholder="..." />
-                <marker date="1460125803000" expanded="true" signature="4744:5240" placeholder="..." />
-                <marker date="1460125803000" expanded="true" signature="4787:5016" placeholder="..." />
-                <marker date="1460125803000" expanded="true" signature="4853:5001" placeholder="..." />
-                <marker date="1460125803000" expanded="true" signature="4865:5000" placeholder="..." />
-                <marker date="1460125803000" expanded="true" signature="5022:5230" placeholder="..." />
-                <marker date="1460125803000" expanded="true" signature="5065:5215" placeholder="..." />
-                <marker date="1460125803000" expanded="true" signature="5077:5214" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/task/add.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="50" column="94" selection-start-line="50" selection-start-column="94" selection-end-line="50" selection-end-column="94" />
+            <state relative-caret-position="480">
+              <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TaskController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="43" column="31" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskRequest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Requests/TaskRequest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/sprint/list.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="79" column="51" selection-start-line="79" selection-start-column="51" selection-end-line="79" selection-end-column="51" />
-              <folding>
-                <marker date="1460121861000" expanded="true" signature="2534:2903" placeholder="SELECT SEC_T... zeiterfassung" />
-                <marker date="1460121861000" expanded="true" signature="3006:3362" placeholder="SELECT SUM( zeiterfassung" />
-                <marker date="1460121861000" expanded="true" signature="3462:3739" placeholder="SELECT ( SUM... task" />
-                <marker date="1460121861000" expanded="true" signature="3500:3572" placeholder="SELECT (SUM(... task" />
-                <marker date="1460121861000" expanded="true" signature="3625:3675" placeholder="SELECT count... usertask" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -184,7 +103,6 @@
         <option value="$PROJECT_DIR$/resources/views/time/list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/app/UserTask.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TimeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SprintController.php" />
         <option value="$PROJECT_DIR$/resources/views/sprint/list.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
@@ -194,6 +112,7 @@
         <option value="$PROJECT_DIR$/resources/views/task/add.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" />
         <option value="$PROJECT_DIR$/resources/views/task/list.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TimeController.php" />
       </list>
     </option>
   </component>
@@ -550,12 +469,12 @@
       <workItem from="1459784406803" duration="119000" />
       <workItem from="1460101855339" duration="390000" />
       <workItem from="1460115496866" duration="830000" />
-      <workItem from="1460116468759" duration="8246000" />
+      <workItem from="1460116468759" duration="8959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39878000" />
+    <option name="totallyTimeSpent" value="40591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
@@ -856,30 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/time/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="40" column="96" selection-start-line="40" selection-start-column="96" selection-end-line="40" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TimeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/sprint/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/user/list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -920,24 +815,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/time/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="79" column="51" selection-start-line="79" selection-start-column="51" selection-end-line="79" selection-end-column="51" />
-          <folding>
-            <marker date="1460121861000" expanded="true" signature="2534:2903" placeholder="SELECT SEC_T... zeiterfassung" />
-            <marker date="1460121861000" expanded="true" signature="3006:3362" placeholder="SELECT SUM( zeiterfassung" />
-            <marker date="1460121861000" expanded="true" signature="3462:3739" placeholder="SELECT ( SUM... task" />
-            <marker date="1460121861000" expanded="true" signature="3500:3572" placeholder="SELECT (SUM(... task" />
-            <marker date="1460121861000" expanded="true" signature="3625:3675" placeholder="SELECT count... usertask" />
-          </folding>
+        <state relative-caret-position="600">
+          <caret line="40" column="96" selection-start-line="40" selection-start-column="96" selection-end-line="40" selection-end-column="96" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/TaskRequest.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TaskController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+        <state relative-caret-position="495">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/task/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="50" column="94" selection-start-line="50" selection-start-column="94" selection-end-line="50" selection-end-column="94" />
           <folding />
         </state>
       </provider>
@@ -961,22 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/task/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="50" column="94" selection-start-line="50" selection-start-column="94" selection-end-line="50" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TaskController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="43" column="31" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/task/list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="613">
@@ -988,6 +869,44 @@
             <marker date="1460126264000" expanded="true" signature="3738:3776" placeholder="..." />
             <marker date="1460126264000" expanded="true" signature="3838:3864" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/TaskRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/sprint/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="79" column="51" selection-start-line="79" selection-start-column="51" selection-end-line="79" selection-end-column="51" />
+          <folding>
+            <marker date="1460121861000" expanded="true" signature="2534:2903" placeholder="SELECT SEC_T... zeiterfassung" />
+            <marker date="1460121861000" expanded="true" signature="3006:3362" placeholder="SELECT SUM( zeiterfassung" />
+            <marker date="1460121861000" expanded="true" signature="3462:3739" placeholder="SELECT ( SUM... task" />
+            <marker date="1460121861000" expanded="true" signature="3500:3572" placeholder="SELECT (SUM(... task" />
+            <marker date="1460121861000" expanded="true" signature="3625:3675" placeholder="SELECT count... usertask" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TimeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>

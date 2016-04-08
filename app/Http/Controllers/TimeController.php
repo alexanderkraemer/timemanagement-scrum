@@ -51,6 +51,7 @@ class TimeController extends Controller
     {
         $lastSprintID = DB::table('sprint')
                             ->orderBy('id', 'desc')
+                            ->whereNull('deleted_at')
                             ->first();
 
         if($lastSprintID != NULL)
