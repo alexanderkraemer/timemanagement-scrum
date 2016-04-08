@@ -32,7 +32,7 @@
                           ->leftjoin ( 'zeiterfassung', 'zeiterfassung.user_id', '=', 'users.id' )
                           ->leftjoin ( 'task', 'task.id', '=', 'zeiterfassung.task_id' )
                           ->select ( 'users.id as id', 'users.name as name', 'users.email as email',
-                                     DB::raw ( '(SELECT SEC_TO_TIME( SUM( TIME_TO_SEC( `timeneeded` ) ) ) FROM zeiterfassung WHERE user_id = users.id) as aufgebrachtestunden' ) )
+                                     DB::raw ( '(SELECT SEC_TO_TIME( SUM( TIME_TO_SEC( `timeneeded` ) ) ) FROM zeiterfassung WHERE zeiterfassung.deleted_at IS NULL AND user_id = users.id) as aufgebrachtestunden' ) )
                           ->groupBy ( 'users.id' )
                           ->paginate ( 15 );
 
@@ -85,11 +85,11 @@
 
                 $aufgebrachtestundenTimestamp = DB::select ( DB::raw ( 'SELECT SEC_TO_TIME(SUM( TIME_TO_SEC( `timeneeded` ) + TIME_TO_SEC( `timestillneeded` ) )) as aufgebrachtestunden 
                                                                FROM zeiterfassung LEFT JOIN task ON task.id = zeiterfassung.task_id 
-                                                               WHERE task.sprint_id = ' . $lastSprintID . ' and user_id = ' . $id ) )[ 0 ]->aufgebrachtestunden;
+                                                               WHERE task.sprint_id = ' . $lastSprintID . ' AND zeiterfassung.deleted_at IS NULL AND user_id = ' . $id ) )[ 0 ]->aufgebrachtestunden;
 
                 $aufgebrachtestunden = DB::select ( DB::raw ( 'SELECT SUM( TIME_TO_SEC( `timeneeded` ) + TIME_TO_SEC( `timestillneeded` ) ) as aufgebrachtestunden 
                                                                FROM zeiterfassung LEFT JOIN task ON task.id = zeiterfassung.task_id 
-                                                               WHERE task.sprint_id = ' . $lastSprintID . ' and user_id = ' . $id ) )[ 0 ]->aufgebrachtestunden;
+                                                               WHERE task.sprint_id = ' . $lastSprintID . ' AND zeiterfassung.deleted_at IS NULL AND user_id = ' . $id ) )[ 0 ]->aufgebrachtestunden;
 
 
                 $geschaetzteZeit = DB::select ( DB::raw ( 'SELECT (
