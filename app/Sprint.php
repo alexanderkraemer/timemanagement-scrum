@@ -12,6 +12,7 @@ class Sprint extends Model
     protected $table = 'sprint';
 
     protected $fillable = [
-        'name'
+        'name',
+        'maxtime'
     ];
 }

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Sprint hinzufügen
@@ -25,6 +25,12 @@
                             {!! Form::label('name', 'Name', ['class' => 'col-md-2 control-label']) !!}
                             <div class="col-md-10">
                                 {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Name']) !!}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            {!! Form::label('maxtime', 'Max Time', ['class' => 'col-md-2 control-label']) !!}
+                            <div class="col-md-10">
+                                {!! Form::text('maxtime', null, ['class' => 'form-control', 'placeholder' => 'Max Time']) !!}
                             </div>
                         </div>
                         <div class="form-group col-md-12">

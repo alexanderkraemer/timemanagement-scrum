@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Time
@@ -17,6 +17,7 @@
                             <th>Task-Nr</th>
                             <th>Taskname</th>
                             <th>Username</th>
+                            <th>Datum</th>
                             <th>Gebrauchte Zeit</th>
                             <th>Verbleibende Zeit</th>
                         </tr>
@@ -32,6 +33,7 @@
                                 <td>{{ $time->tasknr }}</td>
                                 <td>{{ $time->taskname }}</td>
                                 <td>{{ $time->username }}</td>
+                                <td>{{ dateFromTimestamp($time->date) }}</td>
                                 <td>{{ $time->timeneeded }}</td>
                                 <td>{{ $time->timestillneeded }}</td>
                             </tr>

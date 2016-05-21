@@ -123,7 +123,7 @@
     {
         if ( $timestamp == null or $timestamp == '00:00:00' )
         {
-            return null;
+            return '00:00';
         }
         else
         {

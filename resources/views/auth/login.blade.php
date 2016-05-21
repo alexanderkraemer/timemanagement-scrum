@@ -34,7 +34,7 @@
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                @endif
+                                @endif 
                             </div>
                         </div>
 

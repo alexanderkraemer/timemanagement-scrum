@@ -33,6 +33,20 @@ class AuthController extends Controller
     protected $username = 'name';
 
     /**
+     * Disable register!
+     */
+    /*
+    public function showRegistrationForm()
+    {
+        return redirect('login');
+    }
+
+    public function register()
+    {
+
+    }
+    */
+    /**
      * Create a new authentication controller instance.
      *
      * @return void

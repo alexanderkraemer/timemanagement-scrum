@@ -59,7 +59,11 @@
                             ->leftjoin ( 'usertask', 'usertask.task_id', '=', 'task.id' )
                             ->leftjoin('users', 'users.id', '=', 'usertask.user_id')
                             ->select ( 'task.id as id', 'nr', 'sprint.name as sprint', 'task.name as name',
-                                     'task.created_at', 'estimatedtime',
+                                     'task.created_at', 'estimatedtime', 
+                                       DB::raw('(SELECT SEC_TO_TIME(SUM(TIME_TO_SEC(timeneeded))) 
+                                                 FROM zeiterfassung 
+                                                 WHERE zeiterfassung.task_id = usertask.task_id 
+                                                 AND zeiterfassung.deleted_at IS NULL) as timeneeded'),
                                        DB::raw('(SELECT GROUP_CONCAT((SELECT name FROM users where id = usertask.user_id) SEPARATOR ", ") 
                                                 FROM usertask WHERE task_id = task.id) as erlediger')
                             )
@@ -119,14 +123,17 @@
                 return redirect('task/create');   
             }
             
-
-            foreach($request->only('user')['user'] as $user)
+            if($request->only('user')['user'] != NULL)
             {
-                $usertask = new UserTask();
-                $usertask->task_id = $task->id;
-                $usertask->user_id = $user;
-                $usertask->save();
+                foreach($request->only('user')['user'] as $user)
+                {
+                    $usertask = new UserTask();
+                    $usertask->task_id = $task->id;
+                    $usertask->user_id = $user;
+                    $usertask->save();
+                }    
             }
+            
 
             return redirect ( 'task/create' );
 

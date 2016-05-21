@@ -32,8 +32,8 @@ class TimeController extends Controller
         $timeList = DB::table ( 'zeiterfassung' )
                       ->leftjoin ( 'task', 'task.id', '=', 'zeiterfassung.task_id' )
                       ->leftjoin ( 'users', 'users.id', '=', 'zeiterfassung.user_id' )
-                      ->select ( 'zeiterfassung.id as id', 'task.name as taskname',
-                        'task.nr as tasknr', 'zeiterfassung.id as timeid',
+                      ->select ( 'zeiterfassung.id as id', 'zeiterfassung.created_at as date', 
+                        'task.name as taskname', 'task.nr as tasknr', 'zeiterfassung.id as timeid',
                         'users.name as username', 'timeneeded', 'timestillneeded')
                       ->orderBy('zeiterfassung.id', 'desc')
                       //->where ( 'zeiterfassung.user_id', '=', Auth::user()->id )
@@ -51,7 +51,6 @@ class TimeController extends Controller
     {
         $lastSprintID = DB::table('sprint')
                             ->orderBy('id', 'desc')
-                            ->whereNull('deleted_at')
                             ->first();
 
         if($lastSprintID != NULL)

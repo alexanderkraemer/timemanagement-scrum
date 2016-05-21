@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Tasks
@@ -14,32 +14,33 @@
                         @if(count($sprintList) > 1)
                         <h4 style="margin:0;">Sprint:</h4>
                         <ul class="pagination">
-                            <li><a href="http://localhost:8000/task?sprint=1" rel="prev">«</a></li>
                                 @foreach($sprintList as $sprint)
                                     @if(!isset($_GET['sprint']) OR !is_numeric($_GET['sprint']))
                                         @if($selectedSprint == $sprint->id)
                                             <li class="active"><span>{{ $sprint->name }}</span></li>
                                         @else
-                                            <li><a href="http://localhost:8000/task?
-                                            @if(
-                                            isset($_GET['page']) AND is_numeric($_GET['page']))
-                                                page={{ $_GET['page'] }}&
-                                            @endif
-                                            sprint={{ $sprint->id }}">{{ $sprint->name }}</a></li>
+                                            <li><a href="http://time.alexanderkraemer.com/task?<?php 
+                                            if(isset($_GET['page']) AND is_numeric($_GET['page']))
+                                            {
+                                                echo "page=". $_GET['page'] . "&";
+                                            }
+                                                
+                                            ?>sprint={{ $sprint->id }}">{{ $sprint->name }}</a></li>
                                         @endif
                                     @else
                                         @if($_GET['sprint'] == $sprint->id)
                                             <li class="active"><span>{{ $sprint->name }}</span></li>
                                         @else
-                                            <li><a href="http://localhost:8000/task?
-                                            @if(isset($_GET['page']) AND is_numeric($_GET['page']))
-                                                  page={{ $_GET['page'] }}&
-                                            @endif
-                                            sprint={{ $sprint->id }}">{{ $sprint->name }}</a></li>
+                                            <li><a href="http://time.alexanderkraemer.com/task?<?php 
+                                            if(isset($_GET['page']) AND is_numeric($_GET['page']))
+                                            {
+                                                echo "page=". $_GET['page'] . "&";
+                                            }
+                                                
+                                            ?>sprint={{ $sprint->id }}">{{ $sprint->name }}</a></li>
                                         @endif
                                     @endif
                                 @endforeach
-                            <li class="disabled"><span>»</span></li>
                         </ul>
                         @endif
                         <table class="table table-responsive table-bordered hover">
@@ -52,6 +53,7 @@
                                 <th>Name</th>
                                 <th>Erstellt am</th>
                                 <th>Geschätzte Zeit</th>
+                                <th>Gebrauchte Zeit</th>
                                 <th>Erledigung durch</th>
                             </tr>
                             </thead>
@@ -77,6 +79,7 @@
                                     <td>{{ $task->name }}</td>
                                     <td>{{ dateFromTimestamp($task->created_at) }}</td>
                                     <td>{{ $task->estimatedtime }}</td>
+                                    <td>{{ timeFromTimestamp($task->timeneeded) }}</td>
                                     <td>{{ $task->erlediger }}</td>
                                 </tr>
                             @endforeach

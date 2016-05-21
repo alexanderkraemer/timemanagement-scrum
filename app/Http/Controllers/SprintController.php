@@ -40,9 +40,24 @@ class SprintController extends Controller
                               ->WhereNull('deleted_at')
                               ->first()->id;
         }
+        // 
 
 
-        $sprintList = Sprint::paginate(15);
+        $sprintList = DB::table('sprint')
+        ->select('sprint.id as id', 'sprint.name as name', 'sprint.maxtime as maxtime',
+            DB::raw('(SELECT 
+                      SEC_TO_TIME(SUM(TIME_TO_SEC(estimatedtime))) 
+                      FROM task 
+                      WHERE task.sprint_id = sprint.id 
+                      AND task.deleted_at IS NULL) as sumtime')
+            /*DB::raw('(SELECT SUM()
+                        SELECT SEC_TO_TIME(SUM(TIME_TO_SEC(timeneeded))) 
+                      FROM zeiterfassung 
+                      WHERE zeiterfassung.task_id = usertask.task_id 
+                      AND zeiterfassung.deleted_at IS NULL) as timeneeded')*/
+            )
+        ->WhereNull('sprint.deleted_at')
+        ->paginate(15);
 
         return view('sprint.list', compact('sprintList', 'lastSprintId'));
     }
@@ -112,8 +127,8 @@ class SprintController extends Controller
      */
     public function destroy($id)
     {
-        $sprint = Sprint::findOrFail($id);
+        $sprint = Sprint::find($id);
         $sprint->delete();
-        return redirect('sprint');
+        return redirect('/sprint');
     }
 }
